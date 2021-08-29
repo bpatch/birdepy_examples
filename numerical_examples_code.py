@@ -374,7 +374,7 @@ if complete_version:
             tic = time.time()
             est = bd.estimate(t_data, p_data, [0.51, 0.5, alpha_mid], [[1e-6,5], [1e-6,5], [1e-6, alpha_max]],
                               framework='em', technique=technique, accelerator=accelerator,
-                              model='Verhulst', known_p=[0], idx_known_p=[3], con=con, display=True)
+                              model='Verhulst', known_p=[0], idx_known_p=[3], con=con, display=False)
             toc = time.time() - tic
             (est.p).insert(0, accelerator)
             (est.p).insert(0, technique)
@@ -389,7 +389,7 @@ else:
             tic = time.time()
             est = bd.estimate(t_data, p_data, [0.51, 0.5, alpha_mid], [[1e-6,5], [1e-6,5], [1e-6, alpha_max]],
                               framework='em', technique=technique, accelerator=accelerator,
-                              model='Verhulst', known_p=[0], idx_known_p=[3], con=con, display=True)
+                              model='Verhulst', known_p=[0], idx_known_p=[3], con=con, display=False)
             toc = time.time() - tic
             (est.p).insert(0, accelerator)
             (est.p).insert(0, technique)
