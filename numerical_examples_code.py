@@ -158,8 +158,6 @@ zz =  np.arange(0, 40, 1)
 model = 'Verhulst'
 z0 = 15
 
-fig, axs = plt.subplots(2,4, sharex=True, sharey=True)
-
 fig.suptitle("Small population Verhulst density approximations")
 
 tic = time.time()
@@ -313,7 +311,7 @@ if complete_version:
     ### ABC ESTIMATION EXPERIMENT ###
     est = bd.estimate(t_data, p_data, [0.5], [[0,1]], framework='abc', model='Verhulst',
                       known_p=[nu, alpha, beta], idx_known_p=[1, 2, 3], 
-                      seed=2021, display=True)
+                      seed=2021, display=False)
 
     print('ABC estimate is', est.p, ', with standard error', est.se,
           'computed in ', est.compute_time, 'seconds.')
