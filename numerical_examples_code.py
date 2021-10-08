@@ -299,7 +299,7 @@ beta = 0
 param = [gamma, nu, alpha, beta]
 num_sample_paths = 5
 
-obs_times = [t for t in range(100)]
+obs_times = list(range(100))
 p_data = bd.simulate.discrete(param, 'Verhulst', 5, obs_times, seed=2021, k=num_sample_paths)
 t_data = [obs_times for _ in range(num_sample_paths)]
 
