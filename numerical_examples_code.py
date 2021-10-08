@@ -310,7 +310,7 @@ alpha_mid = 0.5*alpha_max
 ### ABC ESTIMATION EXPERIMENT ###
 est = bd.estimate(t_data, p_data, [0.5], [[0,1]], framework='abc', model='Verhulst',
                   known_p=[nu, alpha, beta], idx_known_p=[1, 2, 3], max_its=1,
-                  seed=2021, display=False)
+                  seed=2021)
 
 print(f'Basic ABC estimate is {est.p}, with standard error {est.se}'
       f'computed in {est.compute_time} seconds.')
@@ -319,7 +319,7 @@ print(f'Basic ABC estimate is {est.p}, with standard error {est.se}'
 if complete_version:
     est = bd.estimate(t_data, p_data, [0.5], [[0,1]], framework='abc', model='Verhulst',
                       known_p=[nu, alpha, beta], idx_known_p=[1, 2, 3], 
-                      seed=2021, display=False)
+                      seed=2021)
 
     print(f'Dynamic ABC estimate is {est.p}, with standard error {est.se}'
           f'computed in {est.compute_time} seconds.')
